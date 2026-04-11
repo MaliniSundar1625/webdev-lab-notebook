@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercise 02 - Form</title>
+  </head>
+  <body>
+    <main>
+      <h1>Roth IRA Calculator</h1>
+      <form>
+        <p>
+          <label for="balance">Balance ($)</label><br />
+          <input type="text" id="balance" name="balance" />
+        </p>
+
+        <p>
+          <label for="annual-contribution">Annual contribution (4)</label><br />
+          <input type="text" id="annual-contribution" name="annual-contribution" />
+        </p>
+
+        <fieldset>
+          <legend>Maximize contributions?</legend>
+          <label><input type="radio" name="maximize" value="yes" /> Yes</label>
+          <label><input type="radio" name="maximize" value="no" /> No</label>
+        </fieldset>
+
+        <p>
+          <label for="rate-of-return">Expected rate of return (5)</label><br />
+          <input type="number" id="rate-of-return" name="rate-of-return" />
+        </p>
+
+        <p>
+          <label for="current-age">Current age</label><br />
+          <input type="number" id="current-age" name="current-age" />
+        </p>
+
+        <p>
+          <label for="retirement-age">Retirement age</label><br />
+          <input type="number" id="retirement-age" name="retirement-age" />
+        </p>
+
+        <p>
+          <label for="tax-rate">Marginal tax rate (%)</label><br />
+          <input type="number" id="tax-rate" name="tax-rate" />
+        </p>
+
+        <button type="submit">Calculate</button>
+        <button type="reset">Reset</button>
+      </form>
+
+      <p>
+        This exercise is a simplified version of the Roth IRA Calculator at
+        <a href="https://www.calculator.net/roth-ira-calculator.html">Calculator.net</a>
+      </p>
+    </main>
+  </body>
+</html>
