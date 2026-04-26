@@ -1,0 +1,350 @@
+/* ===== CSS Custom Properties ===== */
+:root {
+  /* Exercise 01 - Books */
+  --ice-blue-juvie: #8fbcd4;
+  --gothic-gray-blue: #6f8796;
+  --dark-slate-infinity: #1f2a33;
+
+  /* Exercise 02 - Form */
+  --midnight-blue: #161678;
+}
+
+/* ===== Global Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== Skip Navigation Link ===== */
+.skip-link {
+  background-color: var(--dark-slate-infinity);
+  color: #fff;
+  font-size: 1rem;
+  left: 0.5rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: -100%;
+  z-index: 999;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+/* ==============================
+   Exercise 01 - Books
+============================== */
+
+/* ----- Page Background ----- */
+.books-page {
+  background-color: #f8f8f8;
+}
+
+/* ----- Navbar ----- */
+.navbar {
+  background-color: var(--dark-slate-infinity);
+  padding: 0.75rem 2rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  border-radius: 4px;
+  color: var(--ice-blue-juvie);
+  display: inline-block;
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Hover: ice-blue background with dark text - contrast ratio ~5:1 (WCAG AA) */
+.nav-link:hover,
+.nav-link:focus-visible {
+  background-color: var(--ice-blue-juvie);
+  color: var(--dark-slate-infinity);
+  outline: none;
+}
+
+/* ----- Main Content Layout ----- */
+.main-content {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 2rem;
+}
+
+/* ----- Headings ----- */
+.main-heading {
+  color: var(--gothic-gray-blue);
+  font-family: "Cinzel", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.main-content section h2 {
+  color: var(--dark-slate-infinity);
+  font-family: "Cinzel", serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.main-content hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+}
+
+/* ----- Book Series List ----- */
+.book-list {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-top: 0;
+}
+
+.nested-book-list {
+  list-style: decimal;
+  margin-top: 0.25rem;
+}
+
+/* ----- Book Cover Images ----- */
+.book-covers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.book-cover {
+  display: block;
+  height: auto;
+  max-width: 250px;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.book-cover:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transform: scale(1.05);
+}
+
+/* ----- POV Characters Table ----- */
+.pov-table {
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.pov-table th,
+.pov-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+}
+
+.pov-table thead th {
+  background-color: var(--dark-slate-infinity);
+  color: #fff;
+  font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+}
+
+.pov-table tbody th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+  text-align: left;
+}
+
+.pov-table td.na {
+  /* #4d6474 gives ~5.7:1 contrast on white - passes WCAG AA */
+  color: #4d6474;
+  font-style: italic;
+}
+
+.pov-table tfoot td {
+  background-color: #f0f0f0;
+  text-align: right;
+}
+
+.pov-table tfoot td:last-child {
+  text-align: center;
+}
+
+/* ==============================
+   Exercise 02 - Form
+============================== */
+
+/* ----- Page Background ----- */
+.form-page {
+  background-color: var(--midnight-blue);
+  min-height: 100vh;
+}
+
+/* ----- Form Card ----- */
+.form-main {
+  background-color: #fff;
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: 560px;
+  padding: 2rem 2.5rem 1.5rem;
+}
+
+.form-heading {
+  color: var(--midnight-blue);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ----- Form Grid Layout ----- */
+.calculator-form {
+  align-items: center;
+  display: grid;
+  gap: 1rem 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.calculator-form > label {
+  color: #2a2a3a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.calculator-form > input {
+  border: 1px solid #c8c8d8;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.2s ease;
+  width: 100%;
+}
+
+.calculator-form > input:focus {
+  border-color: var(--midnight-blue);
+  box-shadow: 0 0 0 3px rgba(22, 22, 120, 0.15);
+  outline: none;
+}
+
+/* ----- Radio Fieldset ----- */
+.radio-fieldset {
+  border: none;
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0;
+}
+
+.radio-fieldset legend {
+  color: #2a2a3a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.radio-options {
+  display: flex;
+  gap: 2rem;
+  padding-left: 0.5rem;
+}
+
+.radio-options label {
+  align-items: center;
+  color: #2a2a3a;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.95rem;
+  gap: 0.4rem;
+}
+
+/* ----- Form Buttons ----- */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  grid-column: 1 / -1;
+  margin-top: 0.5rem;
+}
+
+.calculate-btn {
+  background-color: var(--midnight-blue);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.calculate-btn:hover {
+  background-color: #2020a8;
+}
+
+.calculate-btn:focus-visible {
+  outline: 3px solid var(--midnight-blue);
+  outline-offset: 3px;
+}
+
+.reset-btn {
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 10px;
+  color: #2a2a3a;
+  cursor: pointer;
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.reset-btn:hover {
+  background-color: #c8c8c8;
+}
+
+.reset-btn:focus-visible {
+  outline: 3px solid #555;
+  outline-offset: 3px;
+}
+
+/* ----- Form Footer Note ----- */
+.form-footer {
+  color: #444;
+  font-size: 0.875rem;
+  grid-column: 1 / -1;
+  margin-top: 0.5rem;
+}
+
+.form-footer a {
+  color: var(--midnight-blue);
+}
+
+.form-footer a:hover {
+  text-decoration: none;
+}

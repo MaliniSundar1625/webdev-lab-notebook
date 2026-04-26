@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Exercise 01 - Books</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="books-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li>
+          <a class="nav-link" href="#asoiaf-books">ASOIAF Books</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#first-edition-covers"
+            >First Edition Covers</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#pov-characters">Table of POV characters</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main-content" id="main-content">
+      <h1 class="main-heading">A Song of Ice and Fire - George R.R. Martin</h1>
+
+      <section>
+        <h2 id="asoiaf-books">ASOIAF Books</h2>
+        <hr />
+        <ul class="book-list">
+          <li>
+            A Song of Ice and Fire series:
+            <ol class="nested-book-list">
+              <li>A Game of Thrones (1996)</li>
+              <li>A Clash of Kings (1998)</li>
+              <li>A Storm of Swords (2000)</li>
+              <li>A Feast for Crows (2005)</li>
+              <li>A Dance with Dragons (2011)</li>
+            </ol>
+          </li>
+          <li>
+            A Knight of the Seven Kingdoms (2015)
+            <ol class="nested-book-list">
+              <li>The Hedge Knight (1998)</li>
+              <li>The Sworn Sword (2003)</li>
+              <li>The Mystery Knight (2010)</li>
+            </ol>
+          </li>
+          <li>Fire &amp; Blood (2018)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="first-edition-covers">First Edition Covers</h2>
+        <hr />
+        <div class="book-covers">
+          <img
+            alt="A Game of Thrones cover: the title in blue-purple gothic letters above a silver throne of swords"
+            class="book-cover"
+            src="https://upload.wikimedia.org/wikipedia/en/9/93/AGameOfThrones.jpg"
+          />
+          <img
+            alt="A Clash of Kings cover: a woman in red beside a white direwolf, title in red gothic letters"
+            class="book-cover"
+            src="https://upload.wikimedia.org/wikipedia/en/3/39/AClashOfKings.jpg"
+          />
+          <img
+            alt="A Storm of Swords cover: armored knights on a river barge with a castle behind, white title text"
+            class="book-cover"
+            src="https://upload.wikimedia.org/wikipedia/en/2/24/AStormOfSwords.jpg"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2 id="pov-characters">
+          POV Character with the Most Chapters in Each Book
+        </h2>
+        <table class="pov-table" aria-labelledby="pov-characters">
+          <thead>
+            <tr>
+              <th rowspan="2" scope="col">POV Character</th>
+              <th colspan="5" scope="colgroup">Books</th>
+              <th rowspan="2" scope="col">Total Chapters</th>
+            </tr>
+            <tr>
+              <th scope="col">A Game of Thrones</th>
+              <th scope="col">A Clash of Kings</th>
+              <th scope="col">A Storm of Swords</th>
+              <th scope="col">A Feast for Crows</th>
+              <th scope="col">A Dance with Dragons</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Eddard Stark</th>
+              <td>15</td>
+              <td class="na" colspan="4">n/a</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <th scope="row">Tyrion Lannister</th>
+              <td>9</td>
+              <td>15</td>
+              <td>11</td>
+              <td class="na">n/a</td>
+              <td>12</td>
+              <td>47</td>
+            </tr>
+            <tr>
+              <th scope="row">Arya Stark</th>
+              <td>5</td>
+              <td>10</td>
+              <td>13</td>
+              <td>3</td>
+              <td>2</td>
+              <td>33</td>
+            </tr>
+            <tr>
+              <th scope="row">Cersei Lannister</th>
+              <td class="na" colspan="3">n/a</td>
+              <td>10</td>
+              <td class="na">n/a</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <th scope="row">Jon Snow</th>
+              <td>9</td>
+              <td>8</td>
+              <td>12</td>
+              <td class="na">n/a</td>
+              <td>13</td>
+              <td>42</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="6">
+                <strong>Total POV Chapters (Displayed)</strong>
+              </td>
+              <td><strong>147</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
