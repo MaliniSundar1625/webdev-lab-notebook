@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Layout Exercise 02 - Flexbox</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Simple Game Showcase</h1>
+      <nav class="site-nav" aria-label="Game sections">
+        <ul>
+          <li><a href="#dino-game">Dino Game</a></li>
+          <li><a href="#goose-game">Untitled Goose Game</a></li>
+          <li><a href="#flappy-bird">Flappy Bird</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="games-container">
+      <section id="dino-game" class="game-card" aria-labelledby="dino-heading">
+        <h2 id="dino-heading">Chrome Dino Game</h2>
+        <p>
+          The Chrome Dino Game was released in 2014 by Google. It appears when
+          users lose internet connection in the Chrome browser. Players control
+          a small dinosaur that runs endlessly, jumping over obstacles like
+          cacti and dodging flying enemies.
+        </p>
+        <p>
+          Many people describe the game as simple but addictive. It has become
+          an iconic offline pastime and is praised for turning a frustrating
+          situation into something fun.
+        </p>
+        <figure>
+          <img
+            src="images/dino.svg"
+            alt="Chrome Dino: pixelated T-Rex sprite from Chrome's offline error page"
+            width="200"
+          />
+          <figcaption>The Chrome Dino running through the desert.</figcaption>
+        </figure>
+      </section>
+
+      <section
+        id="goose-game"
+        class="game-card"
+        aria-labelledby="goose-heading"
+      >
+        <h2 id="goose-heading">Untitled Goose Game</h2>
+        <p>
+          Untitled Goose Game was released in 2019 by House House. It is a
+          puzzle-stealth game where players control a mischievous goose causing
+          chaos in a quiet village.
+        </p>
+        <p>
+          The game received widespread praise for its humor, unique concept, and
+          charming design. Players especially enjoyed the freedom to annoy
+          villagers in creative ways.
+        </p>
+        <figure>
+          <img
+            src="images/goose-game.jpg"
+            alt="Untitled Goose Game cover art: white goose with a pile of stolen objects"
+            width="200"
+          />
+          <figcaption>The mischievous goose causing trouble.</figcaption>
+        </figure>
+      </section>
+
+      <section
+        id="flappy-bird"
+        class="game-card"
+        aria-labelledby="flappy-heading"
+      >
+        <h2 id="flappy-heading">Flappy Bird</h2>
+        <p>
+          Flappy Bird was released in 2013 by Dong Nguyen. It is a mobile game
+          where players tap the screen to keep a bird flying between pipes
+          without hitting them.
+        </p>
+        <p>
+          The game became extremely popular for its difficulty and simplicity.
+          Many players found it frustrating yet addictive, leading to viral
+          success before it was eventually removed.
+        </p>
+        <figure>
+          <img
+            src="images/download.webp"
+            alt="Flappy Bird: small yellow bird with round body, white eye, and red beak"
+            width="200"
+          />
+          <figcaption>The iconic Flappy Bird navigating pipes.</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Simple Game Showcase</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+:root {
+  --purple: #800080;
+  --light-text-color: #fefefe;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Visually hidden — accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =============================================
+   Exercise 01 - Center
+   ============================================= */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #dce3f8;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  padding: 1rem;
+  background: var(--purple);
+  color: var(--light-text-color);
+  font-size: 1.75rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* =============================================
+   Common styles for CSS Grid exercises
+   ============================================= */
+
+.grid-item {
+  padding: 10px;
+  background-color: var(--purple);
+  color: var(--light-text-color);
+  font-size: 2em;
+  text-align: center;
+}
+
+/* =============================================
+   Exercise 02 - Flexbox
+   ============================================= */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: var(--light-text-color);
+  padding: 1rem 2rem;
+}
+
+.site-header h1 {
+  margin: 0;
+  color: var(--light-text-color);
+  text-align: left;
+}
+
+.site-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.site-nav a {
+  color: var(--light-text-color);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #00ff00;
+  border-bottom-color: #00ff00;
+}
+
+.games-container {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.game-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.game-card h2 {
+  margin-top: 0;
+}
+
+.game-card figure {
+  margin: auto 0 0;
+  text-align: center;
+}
+
+.game-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.game-card figcaption {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.site-footer {
+  background-color: #000;
+  color: var(--light-text-color);
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* =============================================
+   Exercise 03 - CSS Grid
+   ============================================= */
+
+section.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.item1 {
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+
+.item2 {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  min-height: 200px;
+}
+
+.item3 {
+  grid-column: 3 / 4;
+  grid-row: 2;
+}
+
+.item4 {
+  grid-column: 2 / 3;
+  grid-row: 3;
+}
+
+.item5 {
+  grid-column: 3 / 4;
+  grid-row: 3;
+}
+
+.item6 {
+  display: none;
+}
+
+.item7 {
+  grid-column: 1 / 2;
+  grid-row: 3;
+}
+
+.item8 {
+  grid-column: 1 / 4;
+  grid-row: 4;
+}
+
+/* =============================================
+   Exercise 04 - CSS Grid Areas
+   ============================================= */
+
+.area-header {
+  grid-area: header;
+  min-height: 80px;
+}
+
+.area-article {
+  grid-area: article;
+  min-height: 250px;
+}
+
+.area-aside {
+  grid-area: aside;
+  min-height: 200px;
+}
+
+.area-section {
+  grid-area: section;
+  min-height: 200px;
+}
+
+.area-footer {
+  grid-area: footer;
+  min-height: 60px;
+}
+
+/* Mobile layout (default — 414px and up) */
+.areas-container {
+  display: grid;
+  gap: 5px;
+  grid-template-areas:
+    "title"
+    "header"
+    "article"
+    "section"
+    "aside"
+    "footer";
+}
+
+.areas-container > h1 {
+  grid-area: title;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Tablet layout — 768px and up */
+@media (min-width: 768px) {
+  .areas-container {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "title   title"
+      "header  header"
+      "article aside"
+      "section section"
+      "footer  footer";
+  }
+}
+
+/* Laptop layout — 1024px and up */
+@media (min-width: 1024px) {
+  .areas-container {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "title   title"
+      "header  header"
+      "aside   article"
+      "section section"
+      "footer  footer";
+  }
+}
